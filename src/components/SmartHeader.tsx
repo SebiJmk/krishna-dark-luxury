@@ -45,6 +45,7 @@ const SmartHeader = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
         <button onClick={() => scrollTo("#hero")} className="flex items-center gap-3">
           <img src={logoImg} alt="Krishna Caffe" className="h-14 md:h-16 w-auto" />
+          <span className="font-serif text-lg md:text-xl tracking-widest text-foreground font-medium">Krishna</span>
         </button>
 
         <nav className="hidden md:flex items-center gap-8">
