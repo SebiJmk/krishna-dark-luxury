@@ -1,16 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useCallback } from "react";
+import Preloader from "@/components/Preloader";
+import CustomCursor from "@/components/CustomCursor";
+import SmartHeader from "@/components/SmartHeader";
+import HeroSection from "@/components/HeroSection";
+import ExperiencesSection from "@/components/ExperiencesSection";
+import MenuSection from "@/components/MenuSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [loaded, setLoaded] = useState(false);
+  const onPreloaderComplete = useCallback(() => setLoaded(true), []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <>
+      {!loaded && <Preloader onComplete={onPreloaderComplete} />}
+      <CustomCursor />
+      {loaded && (
+        <div className="min-h-screen bg-background">
+          <SmartHeader />
+          <HeroSection />
+          <ExperiencesSection />
+          <MenuSection />
+          <ContactSection />
+          <Footer />
+        </div>
+      )}
+    </>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
