@@ -33,7 +33,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
         <motion.img
           src={logoImg}
           alt="Krishna Caffe"
-          className="w-24 h-24 md:w-32 md:h-32"
+          className="h-40 md:h-48 w-auto"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: [0, 1, 1, 0.8, 1], scale: [0.8, 1, 1.05, 1, 1.05] }}
           transition={{ duration: 2, ease: "easeInOut" }}
