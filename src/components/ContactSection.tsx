@@ -26,14 +26,14 @@ const ContactSection = () => (
           </div>
           <div>
             <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Contact</p>
-            <p className="text-sm text-foreground">+40 712 345 678<br />hello@krishnacaffe.ro</p>
+            <p className="text-sm text-foreground">0729 745 988<br />krishnacaffe@gmail.com</p>
           </div>
         </div>
       </ScrollReveal>
 
       <ScrollReveal delay={0.3}>
         <a
-          href="tel:+40712345678"
+          href="tel:+40729745988"
           className="inline-block px-10 py-3 border border-primary text-primary text-sm tracking-widest uppercase
                      hover:bg-primary hover:text-primary-foreground hover:shadow-[var(--glow-magenta)]
                      transition-all duration-500 rounded-sm"
